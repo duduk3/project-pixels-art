@@ -42,5 +42,23 @@ body {
 
 .yellow {
     background-color: yellow;
-}    
+}
 
+#pixel-board {
+    width: 400px;
+    height: 402px;
+    border: 0.2px solid black;
+    margin: 15px auto;
+}
+
+.pixel {
+    width: 80px;
+    height: 80px;
+    background-color: white;
+    border: 0.2px solid black;
+}
+
+.linhas {
+    display: flex;
+    justify-content: center;
+}
