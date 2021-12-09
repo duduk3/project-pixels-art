@@ -1,0 +1,42 @@
+*{
+    margin: 0px;
+}
+
+body {
+    background-color: azure;
+}
+
+#title {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: xx-large;
+    color: green;
+    text-align: center;
+}
+
+#color-palette {
+    margin: auto;
+}
+
+.color {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border: 1px solid rgb(26, 23, 23);
+}
+
+.blue {
+    background-color: blue;
+}
+
+.red {
+    background-color: red;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.black {
+    background-color: black;
+}
+
