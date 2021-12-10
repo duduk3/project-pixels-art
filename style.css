@@ -15,51 +15,63 @@ body {
 }
 
 #color-palette {
-    display: flex;
-    justify-content: center;
+    width: 50%;
     margin: auto;
 }
 
 .color {
     display: inline-block;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     margin: 25px 5px;
     border-radius: 100%;
     border: 1px solid rgb(26, 23, 23);
+}
+
+.selected {
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 25px 5px;
+    border-radius: 100%;
+    border: 3px solid green;
 }
 
 .black {
     background-color: black;
 }
 
-.blue {
+.second {
     background-color: blue;
 }    
 
-.red {
+.third {
     background-color: red;
 }    
 
-.yellow {
+.fourth {
     background-color: yellow;
 }
 
 #pixel-board {
-    width: 210px;
-    height: 210px;
+    width: 189px;
+    height: 188px;
     border: 1px solid black;
-    margin: 15px auto;
+    margin: 10px auto;
+    padding: 3px 0px 0px 3px;
+    
 }
 
 .pixel {
+    display: inline-block;
     width: 40px;
     height: 40px;
     background-color: white;
     border: 1px solid black;
+    margin: -4px;
 }
 
 .linhas {
-    display: flex;
-    justify-content: center;
+    display: inline-block;
+    margin: 0px;
 }
