@@ -1,3 +1,7 @@
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable complexity */
+/* eslint-disable eqeqeq */
+/* eslint-disable no-multiple-empty-lines */
 /* eslint-disable no-use-before-define */
 /* eslint-disable spaced-comment */
 /* eslint-disable editorconfig/editorconfig */
@@ -25,11 +29,19 @@ selectedFourth.addEventListener('click', selectColor);
 
 
 function selectColor(event) {
-    if (event.target.classList.length === 2){
-        event.target.classList.add('selected');
+    event.target.classList.add('selected');
+
+    if (event.target !== selectedBlack && selectedBlack.classList.length > 2) {
+        selectedBlack.classList.remove('selected');
     }
-    else {
-        event.target.classList.remove('selected');
+    if (event.target !== selectedSecond && selectedSecond.classList.length > 2) {
+        selectedSecond.classList.remove('selected');
+    }
+    if (event.target !== selectedThird && selectedThird.classList.length > 2) {
+        selectedThird.classList.remove('selected');
+    }
+    if(event.target !== selectedFourth && selectedFourth.classList.length > 2) {
+        selectedFourth.classList.remove('selected');
     }
 }
 
