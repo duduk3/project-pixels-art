@@ -15,32 +15,34 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable prefer-const */
 /* eslint-disable quotes */
-let selectedBlack = document.querySelector(".black");
-let selectedSecond = document.querySelector(".second");
-let selectedThird = document.querySelector(".third");
-let selectedFourth = document.querySelector(".fourth");
+window.onload = console.log('carregado'); 
 
-selectedBlack.classList.add('selected');
+let selectorBlack = document.querySelector(".black");
+let selectorSecond = document.querySelector(".second");
+let selectorThird = document.querySelector(".third");
+let selectorFourth = document.querySelector(".fourth");
 
-selectedBlack.addEventListener('click', selectColor);
-selectedSecond.addEventListener('click', selectColor);
-selectedThird.addEventListener('click', selectColor);
-selectedFourth.addEventListener('click', selectColor);
+selectorBlack.classList.add('selected');
+
+selectorBlack.addEventListener('click', selectColor);
+selectorSecond.addEventListener('click', selectColor);
+selectorThird.addEventListener('click', selectColor);
+selectorFourth.addEventListener('click', selectColor);
 
 function selectColor(event) {
     event.target.classList.add('selected');
 
-    if (event.target !== selectedBlack && selectedBlack.classList.length > 2) {
-        selectedBlack.classList.remove('selected');
+    if (event.target !== selectorBlack && selectorBlack.classList.length > 2) {
+        selectorBlack.classList.remove('selected');
     }
-    if (event.target !== selectedSecond && selectedSecond.classList.length > 2) {
-        selectedSecond.classList.remove('selected');
+    if (event.target !== selectorSecond && selectorSecond.classList.length > 2) {
+        selectorSecond.classList.remove('selected');
     }
-    if (event.target !== selectedThird && selectedThird.classList.length > 2) {
-        selectedThird.classList.remove('selected');
+    if (event.target !== selectorThird && selectorThird.classList.length > 2) {
+        selectorThird.classList.remove('selected');
     }
-    if (event.target !== selectedFourth && selectedFourth.classList.length > 2) {
-        selectedFourth.classList.remove('selected');
+    if (event.target !== selectorFourth && selectorFourth.classList.length > 2) {
+        selectorFourth.classList.remove('selected');
     }
 }
 
@@ -52,19 +54,19 @@ for (let index = 0; index < selectedPixel.length; index += 1) {
 
 
 function selectPixel(event) {
-    if (selectedBlack.classList.length > 2 ) {
+    if (selectorBlack.classList.length > 2 ) {
         event.target.className = 'pixel black';   
         event.target.classList.add('black');   
     }
-    if (selectedSecond.classList.length > 2 ) {
+    if (selectorSecond.classList.length > 2 ) {
         event.target.className = 'pixel second';   
         event.target.classList.add('second');   
     }
-    if (selectedThird.classList.length > 2 ) {
+    if (selectorThird.classList.length > 2 ) {
         event.target.className = 'pixel third';   
         event.target.classList.add('third');   
     }
-    if (selectedFourth.classList.length > 2 ) {
+    if (selectorFourth.classList.length > 2 ) {
         event.target.className = 'pixel fourth';   
         event.target.classList.add('fourth');   
     }
