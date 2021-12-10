@@ -45,9 +45,10 @@ function selectColor(event) {
 }
 
 let selectedPixel = document.querySelectorAll(".pixel");
-console.log(selectedPixel);
 
-selectedPixel[0].addEventListener('click', selectPixel);
+for (let index = 0; index < selectedPixel.length; index += 1) {
+    selectedPixel[index].addEventListener('click', selectPixel);
+}
 
 
 function selectPixel(event) {
