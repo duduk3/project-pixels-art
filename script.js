@@ -16,6 +16,8 @@
 /* eslint-disable prefer-const */
 /* eslint-disable quotes */
 
+window.onload = createPixels(5);
+
 let selectorBlack = document.querySelector(".black");
 let selectorBlue = document.querySelector(".blue");
 let selectorRed = document.querySelector(".red");
@@ -84,5 +86,19 @@ function clearAll(){
     }
 }
 
+//*= =============================================
+//* Requisito 10
+//*= =============================================
+
+function createPixels(tamanho){
+    let paiBoard = document.querySelector("#pixel-board");
+    let filhoPixel = '';
+    
+    for (let i = 0; i < tamanho ** 2; i += 1) {
+        filhoPixel = document.createElement('div');
+        filhoPixel.className = "pixel background-white";
+        paiBoard.appendChild(filhoPixel);
+    }
+}
 
 

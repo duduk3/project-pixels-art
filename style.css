@@ -7,7 +7,7 @@ body {
 }
 
 #title {
-    margin-top: 15px;
+    margin-top: 10px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: xx-large;
     color: green;
@@ -24,7 +24,7 @@ body {
     display: inline-block;
     width: 50px;
     height: 50px;
-    margin: 25px 5px;
+    margin: 5px 5px;
     border-radius: 100%;
     border: 1px solid rgb(26, 23, 23);
 }
@@ -33,7 +33,7 @@ body {
     display: inline-block;
     width: 50px;
     height: 50px;
-    margin: 25px 5px;
+    margin: 5px 5px;
     border-radius: 100%;
     border: 3px solid green;
 }
@@ -59,25 +59,18 @@ body {
 }
 
 #pixel-board {
-    width: 179px;
-    height: 178px;
+    width: 210px;
+    height: 210px;
     border: 1px solid black;
-    margin: 10px auto;
-    padding: 3px 0px 0px 3px;
-    
+    margin: auto;
+    line-height: 0;
 }
 
 .pixel {
     display: inline-block;
-    width: 38px;
-    height: 38px;
+    width: 40px;
+    height: 40px;
     border: 1px solid black;
-    margin: -4px;
-}
-
-.linhas {
-    display: inline-block;
-    margin: 0px;
 }
 
 #clear-board {
