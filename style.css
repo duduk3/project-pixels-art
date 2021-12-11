@@ -79,3 +79,8 @@ body {
     display: inline-block;
     margin: 0px;
 }
+
+#clear-board {
+    display: block;
+    margin: 20px auto;
+}

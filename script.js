@@ -71,5 +71,18 @@ function selectPixel(event) {
     }
 }
 
+//*= =============================================
+//* Requisito 9
+//*= =============================================
+let btnLimpar = document.querySelector("#clear-board");
+
+btnLimpar.addEventListener('click', clearAll);
+
+function clearAll(){
+    for (let index = 0; index < selectedPixel.length; index += 1) {
+        selectedPixel[index].className = 'pixel background-white';
+    }
+}
+
 
 
