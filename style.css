@@ -15,14 +15,15 @@ body {
 }
 
 #color-palette {
-    width: 50%;
-    margin: auto;
+    display: inline-block;
+    width: 100%;
+    text-align: center;   
 }
 
 .color {
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin: 25px 5px;
     border-radius: 100%;
     border: 1px solid rgb(26, 23, 23);
@@ -30,8 +31,8 @@ body {
 
 .selected {
     display: inline-block;
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
     margin: 25px 5px;
     border-radius: 100%;
     border: 3px solid green;
@@ -41,15 +42,15 @@ body {
     background-color: black;
 }
 
-.second {
+.blue {
     background-color: blue;
 }    
 
-.third {
+.red {
     background-color: red;
 }    
 
-.fourth {
+.yellow {
     background-color: yellow;
 }
 
@@ -58,8 +59,8 @@ body {
 }
 
 #pixel-board {
-    width: 189px;
-    height: 188px;
+    width: 179px;
+    height: 178px;
     border: 1px solid black;
     margin: 10px auto;
     padding: 3px 0px 0px 3px;
@@ -68,8 +69,8 @@ body {
 
 .pixel {
     display: inline-block;
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
     border: 1px solid black;
     margin: -4px;
 }

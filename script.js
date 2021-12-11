@@ -15,19 +15,18 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable prefer-const */
 /* eslint-disable quotes */
-window.onload = console.log('carregado'); 
 
 let selectorBlack = document.querySelector(".black");
-let selectorSecond = document.querySelector(".second");
-let selectorThird = document.querySelector(".third");
-let selectorFourth = document.querySelector(".fourth");
+let selectorBlue = document.querySelector(".blue");
+let selectorRed = document.querySelector(".red");
+let selectorYellow = document.querySelector(".yellow");
 
 selectorBlack.classList.add('selected');
 
 selectorBlack.addEventListener('click', selectColor);
-selectorSecond.addEventListener('click', selectColor);
-selectorThird.addEventListener('click', selectColor);
-selectorFourth.addEventListener('click', selectColor);
+selectorBlue.addEventListener('click', selectColor);
+selectorRed.addEventListener('click', selectColor);
+selectorYellow.addEventListener('click', selectColor);
 
 function selectColor(event) {
     event.target.classList.add('selected');
@@ -35,14 +34,14 @@ function selectColor(event) {
     if (event.target !== selectorBlack && selectorBlack.classList.length > 2) {
         selectorBlack.classList.remove('selected');
     }
-    if (event.target !== selectorSecond && selectorSecond.classList.length > 2) {
-        selectorSecond.classList.remove('selected');
+    if (event.target !== selectorBlue && selectorBlue.classList.length > 2) {
+        selectorBlue.classList.remove('selected');
     }
-    if (event.target !== selectorThird && selectorThird.classList.length > 2) {
-        selectorThird.classList.remove('selected');
+    if (event.target !== selectorRed && selectorRed.classList.length > 2) {
+        selectorRed.classList.remove('selected');
     }
-    if (event.target !== selectorFourth && selectorFourth.classList.length > 2) {
-        selectorFourth.classList.remove('selected');
+    if (event.target !== selectorYellow && selectorYellow.classList.length > 2) {
+        selectorYellow.classList.remove('selected');
     }
 }
 
@@ -58,17 +57,17 @@ function selectPixel(event) {
         event.target.className = 'pixel black';   
         event.target.classList.add('black');   
     }
-    if (selectorSecond.classList.length > 2 ) {
-        event.target.className = 'pixel second';   
-        event.target.classList.add('second');   
+    if (selectorBlue.classList.length > 2 ) {
+        event.target.className = 'pixel blue';   
+        event.target.classList.add('blue');   
     }
-    if (selectorThird.classList.length > 2 ) {
-        event.target.className = 'pixel third';   
-        event.target.classList.add('third');   
+    if (selectorRed.classList.length > 2 ) {
+        event.target.className = 'pixel red';   
+        event.target.classList.add('red');   
     }
-    if (selectorFourth.classList.length > 2 ) {
-        event.target.className = 'pixel fourth';   
-        event.target.classList.add('fourth');   
+    if (selectorYellow.classList.length > 2 ) {
+        event.target.className = 'pixel yellow';   
+        event.target.classList.add('yellow');   
     }
 }
 
