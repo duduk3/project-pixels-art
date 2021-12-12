@@ -1,3 +1,5 @@
+/* eslint-disable prefer-template */
+/* eslint-disable sonarjs/no-use-of-empty-return-value */
 /* eslint-disable max-lines-per-function */
 /* eslint-disable no-undef */
 /* eslint-disable space-in-parens */
@@ -16,7 +18,7 @@
 /* eslint-disable prefer-const */
 /* eslint-disable quotes */
 
-window.onload = createPixels(5);
+window.onload = createPixels(10);
 
 let selectorBlack = document.querySelector(".black");
 let selectorBlue = document.querySelector(".blue");
@@ -90,15 +92,23 @@ function clearAll(){
 //* Requisito 10
 //*= =============================================
 
+// let paiInput = document.querySelector('.entrySize');
+// let filhoSize = document.createElement('input');
+
+
 function createPixels(tamanho){
     let paiBoard = document.querySelector("#pixel-board");
     let filhoPixel = '';
-    
+    paiBoard.style.width = (tamanho * 42) + 'px';
+    paiBoard.style.height = (tamanho * 42) + 'px';
+
     for (let i = 0; i < tamanho ** 2; i += 1) {
         filhoPixel = document.createElement('div');
         filhoPixel.className = "pixel background-white";
         paiBoard.appendChild(filhoPixel);
     }
+
+
 }
 
 
