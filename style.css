@@ -28,7 +28,9 @@ body {
 }
 
 #textInput {
-    display: block;
+    position: absolute;
+    left: 20%;
+    margin-top: 10px;
 }
 
 #board-size {
@@ -49,7 +51,7 @@ body {
     height: 50px;
     margin: 5px 5px;
     border-radius: 100%;
-    border: 1px solid rgb(26, 23, 23);
+    border: 1px solid black;
 }
 
 .selected {
@@ -58,8 +60,7 @@ body {
     height: 50px;
     margin: 5px 5px;
     border-radius: 100%;
-    border: 3px solid green;
-}
+    box-shadow: 8px 5px 5px rgb(29, 68, 3);}
 
 .black {
     background-color: black;
