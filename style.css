@@ -20,6 +20,28 @@ body {
     text-align: center;   
 }
 
+.entrySize {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+    margin: 5px auto 10px;
+}
+
+#textInput {
+    display: block;
+}
+
+#board-size {
+    font-size: 20px;
+    width: 40px;
+    height: 28px;
+}
+
+#generate-board {
+    margin-left: 10px;
+    height: 30px;
+}
+
 .color {
     display: inline-block;
     width: 50px;
@@ -59,8 +81,6 @@ body {
 }
 
 #pixel-board {
-    width: 210px;
-    height: 210px;
     border: 1px solid black;
     margin: auto;
     line-height: 0;

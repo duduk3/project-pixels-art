@@ -18,7 +18,7 @@
 /* eslint-disable prefer-const */
 /* eslint-disable quotes */
 
-window.onload = createPixels(10);
+//window.onload = createPixels(10);
 
 let selectorBlack = document.querySelector(".black");
 let selectorBlue = document.querySelector(".blue");
@@ -91,9 +91,10 @@ function clearAll(){
 //*= =============================================
 //* Requisito 10
 //*= =============================================
+// let takeBoardSize = document.querySelector("#board-size");
+// let boardSize = takeBoardSize.target;
+// console.log(boardSize);
 
-// let paiInput = document.querySelector('.entrySize');
-// let filhoSize = document.createElement('input');
 
 
 function createPixels(tamanho){

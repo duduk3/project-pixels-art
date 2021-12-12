@@ -9,13 +9,19 @@
 </head>
 <body>
     <h1 id="title">Paleta de Cores</h1>
-    <form class="entrySize"></form>
+    
     <div id="color-palette">
         <div class="color black "></div>
         <div class="color blue "></div>
         <div class="color red "></div>
         <div class="color yellow "></div>
     </div>
+    
+    <form class="entrySize">
+        <label id="textInput" for="user">Defina um tamanho entre 5 e 50</label>
+        <input id="board-size" type="number" min="5" max="50">
+        <button id="generate-board">Criar Quadro</button>
+    </form>
 
     <div id="pixel-board">
     </div>
