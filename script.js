@@ -1,3 +1,7 @@
+/* eslint-disable no-restricted-globals */
+/* eslint-disable func-names */
+/* eslint-disable sonarjs/no-extra-arguments */
+/* eslint-disable radix */
 /* eslint-disable prefer-template */
 /* eslint-disable sonarjs/no-use-of-empty-return-value */
 /* eslint-disable max-lines-per-function */
@@ -49,52 +53,28 @@ function selectColor(event) {
     }
 }
 
-let selectedPixel = document.querySelectorAll(".pixel");
-
-for (let index = 0; index < selectedPixel.length; index += 1) {
-    selectedPixel[index].addEventListener('click', selectPixel);
-}
-
-
-function selectPixel(event) {
-    if (selectorBlack.classList.length > 2 ) {
-        event.target.className = 'pixel black';   
-        event.target.classList.add('black');   
-    }
-    if (selectorBlue.classList.length > 2 ) {
-        event.target.className = 'pixel blue';   
-        event.target.classList.add('blue');   
-    }
-    if (selectorRed.classList.length > 2 ) {
-        event.target.className = 'pixel red';   
-        event.target.classList.add('red');   
-    }
-    if (selectorYellow.classList.length > 2 ) {
-        event.target.className = 'pixel yellow';   
-        event.target.classList.add('yellow');   
-    }
-}
-
-//*= =============================================
-//* Requisito 9
-//*= =============================================
-let btnLimpar = document.querySelector("#clear-board");
-
-btnLimpar.addEventListener('click', clearAll);
-
-function clearAll(){
-    for (let index = 0; index < selectedPixel.length; index += 1) {
-        selectedPixel[index].className = 'pixel background-white';
-    }
-}
-
 //*= =============================================
 //* Requisito 10
 //*= =============================================
-// let takeBoardSize = document.querySelector("#board-size");
-// let boardSize = takeBoardSize.target;
-// console.log(boardSize);
+let btnSize = document.querySelector("#generate-board");
+let boardSize = document.querySelector("#board-size").value;
 
+btnSize.addEventListener('click', takeValue);
+
+function takeValue(){
+    boardSize = parseInt(document.querySelector("#board-size").value);
+    isPixelExist = document.getElementsByClassName("pixel");
+    if ( isPixelExist.length > 1) {
+        alert('Tem certeza que deseja alterar o tamanho do quadro?');   
+        document.querySelector("#pixel-board").innerText = "";
+    }
+    if (boardSize > 50 || boardSize < 5) {
+        alert('Por favor : o número deve ser um inteiro de 5 à 50');
+    } else {
+        createPixels(boardSize);
+        document.querySelector("#board-size").value = '';
+    }
+}
 
 
 function createPixels(tamanho){
@@ -102,7 +82,6 @@ function createPixels(tamanho){
     let filhoPixel = '';
     paiBoard.style.width = (tamanho * 42) + 'px';
     paiBoard.style.height = (tamanho * 42) + 'px';
-
     for (let i = 0; i < tamanho ** 2; i += 1) {
         filhoPixel = document.createElement('div');
         filhoPixel.className = "pixel background-white";
@@ -110,6 +89,48 @@ function createPixels(tamanho){
     }
 
 
+
+
+
+    //seleciona os pixels no quardo
+    let selectedPixel = document.querySelectorAll(".pixel");
+    console.log(selectedPixel);
+
+    //adiciona evento em cada pixel
+    for (let index = 0; index < selectedPixel.length; index += 1) {
+        selectedPixel[index].addEventListener('click', selectPixel);
+    }
+
+    function selectPixel(event) {
+        if (selectorBlack.classList.length > 2 ) {
+            event.target.className = 'pixel black';   
+            event.target.classList.add('black');   
+        }
+        if (selectorBlue.classList.length > 2 ) {
+            event.target.className = 'pixel blue';   
+            event.target.classList.add('blue');   
+        }
+        if (selectorRed.classList.length > 2 ) {
+            event.target.className = 'pixel red';   
+            event.target.classList.add('red');   
+        }
+        if (selectorYellow.classList.length > 2 ) {
+            event.target.className = 'pixel yellow';   
+            event.target.classList.add('yellow');   
+        }
+    }
+
+    //*= =============================================
+    //* Requisito 9
+    //*= =============================================
+    let btnLimpar = document.querySelector("#clear-board");
+
+    btnLimpar.addEventListener('click', clearAll);
+
+    function clearAll(){
+        for (let index = 0; index < selectedPixel.length; index += 1) {
+            selectedPixel[index].className = 'pixel background-white';
+        }
+    }
+
 }
-
-
