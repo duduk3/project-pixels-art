@@ -22,7 +22,7 @@
 /* eslint-disable prefer-const */
 /* eslint-disable quotes */
 
-//window.onload = createPixels(10);
+window.onload = createPixels(5);
 
 let selectorBlack = document.querySelector(".black");
 let selectorBlue = document.querySelector(".blue");
