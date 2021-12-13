@@ -26,13 +26,14 @@
 
 window.onload = createPixels(5);
 
+//seleciona elementos pela classe
 let selectorBlack = document.querySelector(".black");
 let selectorBlue = document.querySelector(".blue");
 let selectorRed = document.querySelector(".red");
 let selectorYellow = document.querySelector(".yellow");
-
+//mantém uma paleta selecionada
 selectorBlack.classList.add('selected');
-
+//adiciona evento 
 selectorBlack.addEventListener('click', selectColor);
 selectorBlue.addEventListener('click', selectColor);
 selectorRed.addEventListener('click', selectColor);
@@ -54,20 +55,23 @@ function selectColor(event) {
         selectorYellow.classList.remove('selected');
     }
 }
-
+//seleciona elementos pela classe
 let changeFirst = document.querySelector(".blue");
 let changeSecond = document.querySelector(".red");
 let changeThird = document.querySelector(".yellow");
+//gera numero aleatório para o rgb
 let rgbColor1 = Math.random() * 255;
 let rgbColor2 = Math.random() * 255;
 let rgbColor3 = Math.random() * 255;
+//arredondamento
 rgbColor1 = Math.round(rgbColor1);
 rgbColor2 = Math.round(rgbColor2);
 rgbColor3 = Math.round(rgbColor3);
+//gera a cor rgb em string
 let rgb1String = 'rgb( ' + rgbColor1 + ',' + rgbColor2 + ',' + rgbColor3 + ')';
 let rgb2String = 'rgb( ' + rgbColor2 + ',' + rgbColor3 + ',' + rgbColor1 + ')';
 let rgb3String = 'rgb( ' + rgbColor3 + ',' + rgbColor1 + ',' + rgbColor2 + ')';
-
+//altera rgb inline no elemento selecionado
 function createColors(c1, c2, c3){
     changeFirst.style.backgroundColor = c1;
     changeSecond.style.backgroundColor = c2;
@@ -80,18 +84,19 @@ createColors(rgb1String, rgb2String, rgb3String);
 //*= =============================================
 //* Requisito 10
 //*= =============================================
+//seleciona elemento pelo id
 let btnSize = document.querySelector("#generate-board");
+//captura o valor do input
 let boardSize = document.querySelector("#board-size").value;
-
+//insere evento no botão 
 btnSize.addEventListener('click', takeValue);
 
 function takeValue(){
     boardSize = document.querySelector("#board-size").value;
-    isPixelExist = document.getElementsByClassName("pixel");
-
     
     if (boardSize === '' || parseInt(boardSize) < 1 || boardSize === undefined){
         alert('Board inválido!');
+        //limpa o input para nova entrada
         document.querySelector("#board-size").value = '';
         return;
     }
@@ -111,11 +116,12 @@ function takeValue(){
         document.querySelector("#pixel-board").innerText = "";
 
         createPixels(boardSize);
+        //limpa valor do input para nova entrada
         document.querySelector("#board-size").value = '';
     }
 }
 
-
+//gera os pixels e aloca dentro do quadro
 function createPixels(tamanho){
     let paiBoard = document.querySelector("#pixel-board");
     let filhoPixel = '';
@@ -131,14 +137,14 @@ function createPixels(tamanho){
 
 
 
-    //seleciona os pixels no quardo
+    //seleciona os pixels no quadro
     let selectedPixel = document.querySelectorAll(".pixel");
 
     //adiciona evento em cada pixel
     for (let index = 0; index < selectedPixel.length; index += 1) {
         selectedPixel[index].addEventListener('click', selectPixel);
     }
-
+    //altera backgroundColor inline para pintar os pixels de acordo com a cor selecionada
     function selectPixel(event) {
         if (selectorBlack.classList.length > 2 ) {
             event.target.className = 'pixel black';   
@@ -161,6 +167,7 @@ function createPixels(tamanho){
     //*= =============================================
     //* Requisito 9
     //*= =============================================
+    //limpa todo o quadro 
     let btnLimpar = document.querySelector("#clear-board");
 
     btnLimpar.addEventListener('click', clearAll);
