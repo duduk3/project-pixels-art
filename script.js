@@ -55,6 +55,28 @@ function selectColor(event) {
     }
 }
 
+let changeFirst = document.querySelector(".blue");
+let changeSecond = document.querySelector(".red");
+let changeThird = document.querySelector(".yellow");
+let rgbColor1 = Math.random() * 255;
+let rgbColor2 = Math.random() * 255;
+let rgbColor3 = Math.random() * 255;
+rgbColor1 = Math.round(rgbColor1);
+rgbColor2 = Math.round(rgbColor2);
+rgbColor3 = Math.round(rgbColor3);
+let rgb1String = 'rgb( ' + rgbColor1 + ',' + rgbColor2 + ',' + rgbColor3 + ')';
+let rgb2String = 'rgb( ' + rgbColor2 + ',' + rgbColor3 + ',' + rgbColor1 + ')';
+let rgb3String = 'rgb( ' + rgbColor3 + ',' + rgbColor1 + ',' + rgbColor2 + ')';
+
+function createColors(c1, c2, c3){
+    changeFirst.style.backgroundColor = c1;
+    changeSecond.style.backgroundColor = c2;
+    changeThird.style.backgroundColor = c3;
+}
+
+createColors(rgb1String, rgb2String, rgb3String);
+
+
 //*= =============================================
 //* Requisito 10
 //*= =============================================
@@ -120,19 +142,19 @@ function createPixels(tamanho){
     function selectPixel(event) {
         if (selectorBlack.classList.length > 2 ) {
             event.target.className = 'pixel black';   
-            event.target.classList.add('black');   
+            event.target.style.backgroundColor = 'black';   
         }
         if (selectorBlue.classList.length > 2 ) {
-            event.target.className = 'pixel blue';   
-            event.target.classList.add('blue');   
+            event.target.className = 'pixel background-white';   
+            event.target.style.backgroundColor = rgb1String;   
         }
         if (selectorRed.classList.length > 2 ) {
-            event.target.className = 'pixel red';   
-            event.target.classList.add('red');   
+            event.target.className = 'pixel background-white';   
+            event.target.style.backgroundColor = rgb2String;   
         }
         if (selectorYellow.classList.length > 2 ) {
-            event.target.className = 'pixel yellow';   
-            event.target.classList.add('yellow');   
+            event.target.className = 'pixel background-white';   
+            event.target.style.backgroundColor = rgb3String;   
         }
     }
 
@@ -145,8 +167,7 @@ function createPixels(tamanho){
 
     function clearAll(){
         for (let index = 0; index < selectedPixel.length; index += 1) {
-            selectedPixel[index].className = 'pixel background-white';
+            selectedPixel[index].style.backgroundColor = 'white';
         }
     }
-
 }
