@@ -1,3 +1,5 @@
+/* eslint-disable no-unreachable */
+/* eslint-disable use-isnan */
 /* eslint-disable no-restricted-globals */
 /* eslint-disable func-names */
 /* eslint-disable sonarjs/no-extra-arguments */
@@ -62,15 +64,30 @@ let boardSize = document.querySelector("#board-size").value;
 btnSize.addEventListener('click', takeValue);
 
 function takeValue(){
-    boardSize = parseInt(document.querySelector("#board-size").value);
+    boardSize = document.querySelector("#board-size").value;
     isPixelExist = document.getElementsByClassName("pixel");
-    if ( isPixelExist.length > 1) {
-        alert('Tem certeza que deseja alterar o tamanho do quadro?');   
-        document.querySelector("#pixel-board").innerText = "";
+
+    
+    if (boardSize === '' || parseInt(boardSize) < 1 || boardSize === undefined){
+        alert('Board inválido!');
+        document.querySelector("#board-size").value = '';
+        return;
     }
-    if (boardSize > 50 || boardSize < 5) {
-        alert('Por favor : o número deve ser um inteiro de 5 à 50');
+    if (boardSize > 50) {
+        boardSize = '50';
+    } 
+    if (boardSize < 5) {
+        boardSize = '5';
+    }
+    if (boardSize === NaN) {
+        alert('Board inválido!');
+        document.querySelector("#board-size").value = '';
+        boardSize = '5';
     } else {
+        //*= Essa linha abaixo foi sugestão encontrada em : https://pt.stackoverflow.com/questions/441373/como-remover-todos-os-elementos-de-uma-div-em-javascript
+        //limpa o quadro existente para criar outro
+        document.querySelector("#pixel-board").innerText = "";
+
         createPixels(boardSize);
         document.querySelector("#board-size").value = '';
     }
@@ -94,7 +111,6 @@ function createPixels(tamanho){
 
     //seleciona os pixels no quardo
     let selectedPixel = document.querySelectorAll(".pixel");
-    console.log(selectedPixel);
 
     //adiciona evento em cada pixel
     for (let index = 0; index < selectedPixel.length; index += 1) {

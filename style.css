@@ -28,9 +28,7 @@ body {
 }
 
 #textInput {
-    position: absolute;
-    left: 20%;
-    margin-top: 10px;
+    display: block;
 }
 
 #board-size {
@@ -43,6 +41,11 @@ body {
 #generate-board {
     margin-left: 10px;
     height: 30px;
+}
+
+#clear-board {
+    display: block;
+    margin: 10px auto;
 }
 
 .color {
@@ -98,7 +101,3 @@ body {
     border: 1px solid black;
 }
 
-#clear-board {
-    display: block;
-    margin: 20px auto;
-}
