@@ -1,6 +1,6 @@
 # Este projeto é uma página de paleta de cores criada com Html, Css e Javascript!!! :art:
 
-## Aprendemos a manipular os elementos através do javascript, alterado dinamicamente o tamanho do quadro e as cores da paleta.
+## Aprendemos a manipular os elementos através do javascript, alterando dinamicamente o tamanho do quadro e as cores da paleta.
 
 ### A tarefa de manipular elementos Html e Css com o Javascript  foi o conteúdo realizado no bloco 4 do curso da Trybe. 
 
