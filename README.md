@@ -1,13 +1,32 @@
-# :construction: README customizado em construção ! :construction:
-<!-- Olá, Tryber!
-Esse é apenas um arquivo inicial para o README do seu projeto no qual você pode customizar e reutilizar todas as vezes que for executar o trybe-publisher.
+# Este projeto é uma página de paleta de cores criada com Html, Css e Javascript!!! :rocket:
 
-Para deixá-lo com a sua cara, basta alterar o seguinte arquivo da sua máquina: ~/.student-repo-publisher/custom/_NEW_README.md
+## Aprendemos a manipular os elementos através do javascript, alterado dinamicamente o tamanho do quadro e as cores da paleta.
 
-É essencial que você preencha esse documento por conta própria, ok?
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
-:warning: IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
--->
+### A tarefa de manipular elementos Html e Css com o Javascript  foi o conteúdo realizado no bloco 4 do curso da Trybe. 
+
+<details>
+  <summary>
+    <b>📌 Aqui usamos a criatividade pra pintar, mas antes aprendemos a selecionar elementos:</b>
+  </summary>
+  
+  - **por tag**
+  - **por id**
+  - **por classe**
+</details>
+
+<details>
+  <summary>
+    <b>📌 Depois aprendemos a alterar algumas propriedades desses elementos:</b>
+  </summary>
+
+  - **como alterar os styles (CSS)**
+  - **ocultar elementos**
+  - **criar/modificar tabelas**
+  - **criar/modificar outros elementos**
+</details>
+
+<b>😉 Foi muito legal!</b>
+
+
+
+### Foi bem divertido! Ver o código Javascript rodando e proporcinando uma página que responde ao comando do usuário é o máximo.
