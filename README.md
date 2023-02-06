@@ -29,4 +29,4 @@
 
 
 
-### Foi bem divertido! Ver o código Javascript rodando e proporcinando uma página que responde ao comando do usuário é o máximo.🎨
+### Foi bem divertido! Ver o código Javascript rodando e proporcionando uma página que responde ao comando do usuário é o máximo.🎨
