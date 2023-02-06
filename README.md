@@ -1,4 +1,4 @@
-# Este projeto é uma página de paleta de cores criada com Html, Css e Javascript!!! :rocket:
+# Este projeto é uma página de paleta de cores criada com Html, Css e Javascript!!! :art:
 
 ## Aprendemos a manipular os elementos através do javascript, alterado dinamicamente o tamanho do quadro e as cores da paleta.
 
@@ -29,4 +29,4 @@
 
 
 
-### Foi bem divertido! Ver o código Javascript rodando e proporcinando uma página que responde ao comando do usuário é o máximo.
+### Foi bem divertido! Ver o código Javascript rodando e proporcinando uma página que responde ao comando do usuário é o máximo.🎨
